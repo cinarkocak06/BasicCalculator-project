@@ -76,6 +76,14 @@ public class CalculatorController {
         }
     }
 
+    public void deleteDigit(ActionEvent event) {
+        if (currentNumber != null && currentNumber.length() > 0) {
+            currentNumber = currentNumber.substring(0, currentNumber.length() - 1);
+        }
+
+        displayField.setText(currentNumber);
+    }
+
     public void calculateResult(ActionEvent event) {
 
         secondNumber = Double.parseDouble(currentNumber);
